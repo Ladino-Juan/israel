@@ -7,26 +7,22 @@ export interface FaqItem {
 export const faqsList: FaqItem[] = [
   {
     id: '1',
-    question: 'What payment methods do you accept?',
-    answer:
-      'We accept all major credit cards, PayPal, and various other payment methods depending on your location. Please contact our support team for more information on accepted payment methods in your region.',
+    question: 'תוך כמה זמן אני יתחיל להרוויח כסף?',
+    answer: 'אני מת על השאלה הזאת. אין כמה זמן זה כל אחד והקצב למידה שלו יש כאלה יכולים לראות תוצאות תוך חודש ויש כאלה שיקח להם יותר זמן. זה משתנה מבן אדם לבן אדם.'
   },
   {
     id: '2',
-    question: 'How does the pricing work for teams?',
-    answer:
-      'Our pricing is per user, per month. This means you only pay for the number of team members you have on your account. Discounts are available for larger teams and annual subscriptions.',
+    question: 'אין לי ידע בתחום בכלל זה מתאים לי?',
+    answer: 'קודם כל כמובן, אני מלמד הכל מ 0, מהרמה הבסיסית ביותר ועד שאתה מגיע למחזור של 7 ספרות בחודש! ככה שאין לך מה לחשוש אתה תקבל כלים וידע שלא תצבור באף מקום אחר בהבטחה!'
   },
   {
     id: '3',
-    question: 'Can I change my plan later?',
-    answer:
-      'Yes, you can upgrade or downgrade your plan at any time. Changes to your plan will be prorated and reflected in your next billing cycle.',
+    question: 'אבל ניסיתי כבר מה אתה תצליח לחדש לי?',
+    answer: 'קודם כל אני בא ובונה אותך למודל של עסק מה ש100% אף קורס של דרופשיפינג לימד אותך כמובן אני מלמד שיטה שונה מכולם אם זה באסטרטגיית שיווק שלי ואם זה בבחירת מוצרים ואם זה בבניית חנות מטורפת. בקיצור זה לא עוד סתם קורס שאתם מכירים זה משהו שעוד לא היה בארץ בהבטחה!'
   },
   {
     id: '4',
-    question: 'Is my data secure?',
-    answer:
-      'Security is our top priority. We use state-of-the-art encryption and comply with the best industry practices to ensure that your data is stored securely and accessed only by authorized users.',
-  },
+    question: 'אבל מי יעזור לי אם אני יסתבך?',
+    answer: 'אני נותן דגש ענק על ליווי. ברוב הקורסים אין אמא ואבא שילוו אותכם בתהליך. אצלנו אנחנו נותנים דגש ענק על זה עילאי עונה לכולם בשיחות בטלפון או בהודעות ולפעמים גם עולים לשליטה מרחוק על המחשב אם צריכים עזרה שאתם לא מצליחים לפתור בעצמכם או כל שאלה להתייעצות ללא הגבלה בכל שעה.'
+  }
 ]

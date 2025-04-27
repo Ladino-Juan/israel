@@ -25,13 +25,15 @@ export function ProductShowcase() {
     <div className="bg-black bg-gradient-to-b from-black via-[#2d154a] to-black py-[72px] text-white sm:py-24">
       <div className="container">
         <h2 className="text-center text-5xl font-bold tracking-tighter sm:text-6xl">
-          Intuitive interface
+          נעים להכיר
         </h2>
-        <div className="mx-auto max-w-xl">
-          <p className="mt-5 text-center text-xl text-white/70">
-            Celebrate the joy of accomplishment with an app designed to track
-            your progress, motivate your efforts, and celebrate your successes,
-            one task at a time.
+        <div className="mx-auto max-w-3xl">
+          <p className="mt-5 text-center text-xl text-white/80 leading-relaxed">
+            עילאי אוחיון, 18, יזם איקומרס שהתחיל בגיל 12 ופרש מהלימודים כדי לרדוף אחרי חלומות — והגשים אותם.
+            היום אני בונה מותגים, מנהל סוכנות שיווק מובילה, ומלמד אחרים איך לעשות את זה בעצמם.
+          </p>
+          <p className="mt-5 text-center text-xl text-purple-400 font-semibold">
+            רוצה לדעת איך גם אתה יכול? השאר פרטים.
           </p>
         </div>
         <motion.div
@@ -41,12 +43,12 @@ export function ProductShowcase() {
             rotateX,
             transformPerspective: '800px',
           }}
-          className="mx-auto w-full max-w-5xl"
+          className="mx-auto w-full max-w-4xl"
         >
           <img
             src={appScreen}
-            alt="The product screenshot"
-            className="mt-14"
+            alt="צילום מסך של הקורס"
+            className="mt-14 rounded-xl shadow-lg"
             ref={appImageRef}
           />
         </motion.div>

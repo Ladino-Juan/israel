@@ -1,21 +1,21 @@
-import * as Icon from './icons'
+import { FiClock } from 'react-icons/fi';
 
 export function Banner() {
   return (
-    <div className="gradient-primary bg-gradient-to-r py-3 text-center">
+    <div className="gradient-primary bg-gradient-to-r py-3 text-center text-gray-800">
       <div className="container flex items-center justify-center">
-        <p className="flex gap-2 font-medium">
-          <span className="hidden sm:inline">
-            This page is included in a free SaaS Website Kit.
+        <p className="flex items-center gap-2 font-medium text-sm">
+          <FiClock className="animate-pulse" />
+          <span>
+            מבצע מיוחד! הנחות גדולות מסתיימות ב-15 במאי
+            <span className="hidden sm:inline"> - אל תפספסו את ההזדמנות</span>
           </span>
           <a
-            href="#"
-            className="flex items-center gap-1 underline underline-offset-4"
+            href="#register"
+            className="ml-2 flex items-center gap-1 hover:opacity-80 transition-opacity text-sm"
           >
-            View the complete Kit
-            <span>
-              <Icon.ArrowRight />
-            </span>
+            הרשמו עכשיו
+            <span>→</span>
           </a>
         </p>
       </div>

@@ -2,14 +2,13 @@ import { motion, useMotionTemplate, useMotionValue } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
 import { Feature } from '../utils/features-list'
-import * as Icons from './icons'
 
 interface FeatureCardProps {
-  feature: Feature
+  feature: Feature;
 }
 
 export function FeatureCard({
-  feature: { description, id, title },
+  feature: { description, id, title, icon: Icon },
 }: FeatureCardProps) {
   const offsetX = useMotionValue(-100)
   const offsetY = useMotionValue(-100)
@@ -49,8 +48,8 @@ export function FeatureCard({
           maskImage,
         }}
       />
-      <div className="inline-flex h-14 w-14 items-center justify-center rounded-lg bg-white text-black">
-        <Icons.Ecosystem className="h-5 w-5 font-bold" weight="bold" />
+      <div className="inline-flex h-14 w-14 items-center justify-center rounded-lg text-white bg-gradient-to-tr from-pink-400 via-purple-400 to-indigo-400 shadow-md">
+        <Icon className="h-8 w-8" />
       </div>
       <h3 className="mt-6 font-bold">{title}</h3>
       <p className="mt-2 text-white/70">{description}</p>
