@@ -1,7 +1,15 @@
 import { motion, useMotionTemplate, useMotionValue } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
-import { Feature } from '../utils/features-list'
+// Define a more specific type for the icon
+type FeatureIcon = React.ComponentType<{ className?: string }>
+
+export interface Feature {
+  id: string;
+  title: string;
+  description: string;
+  icon: FeatureIcon;
+}
 
 interface FeatureCardProps {
   feature: Feature;
@@ -12,16 +20,12 @@ export function FeatureCard({
 }: FeatureCardProps) {
   const offsetX = useMotionValue(-100)
   const offsetY = useMotionValue(-100)
-
   const maskImage = useMotionTemplate`radial-gradient(100px 100px at ${offsetX}px ${offsetY}px, black, transparent)`
-
   const border = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
     const updateMousePosition = (e: MouseEvent) => {
-      if (!border.current) {
-        return
-      }
+      if (!border.current) return
 
       const borderRect = border.current.getBoundingClientRect()
       offsetX.set(e.x - borderRect.x)
@@ -29,10 +33,7 @@ export function FeatureCard({
     }
 
     window.addEventListener('mousemove', updateMousePosition)
-
-    return () => {
-      window.removeEventListener('mousemove', updateMousePosition)
-    }
+    return () => window.removeEventListener('mousemove', updateMousePosition)
   }, [offsetX, offsetY])
 
   return (

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FiMenu, FiX, FiArrowLeft } from 'react-icons/fi';
+import { FiMenu, FiX } from 'react-icons/fi';
 import Logo from '../assets/images/Logo.svg';
 
 export const navLinks = [
@@ -71,7 +71,7 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-gray-900">
+        <div className="md:hidden bg-black">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <a

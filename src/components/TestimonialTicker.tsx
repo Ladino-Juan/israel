@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { useMediaQuery } from '../hooks/use-media-query'
 
 const testimonials = [
   {
@@ -35,7 +34,6 @@ const testimonials = [
 ]
 
 export function TestimonialTicker() {
-  const { isMobile } = useMediaQuery()
 
   return (
     <div className="bg-black py-8 text-white">

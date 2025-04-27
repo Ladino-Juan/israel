@@ -1,12 +1,13 @@
-import { FaHandsHelping, FaChalkboardTeacher, FaMedal } from 'react-icons/fa';
-import { FeatureCard } from './feature-card';
-import { ElementType } from 'react';
+import { FaHandsHelping, FaChalkboardTeacher, FaMedal } from 'react-icons/fa'
+import { FeatureCard } from './feature-card'
+
+type FeatureIcon = React.ComponentType<{ className?: string }>
 
 export interface Feature {
-  id: string;
-  title: string;
-  description: string;
-  icon: ElementType;
+  id: string
+  title: string
+  description: string
+  icon: FeatureIcon
 }
 
 export const featuresList: Feature[] = [
@@ -31,28 +32,28 @@ export const featuresList: Feature[] = [
       'אנחנו כל כך בטוחים שתצליחו, שאם לא תגיעו לתוצאות - תקבלו החזר כספי מלא!',
     icon: FaMedal,
   },
-];
+]
 
 export function Features() {
   return (
-    <div className="bg-black py-[72px] text-white sm:py-24">
-      <div className="container">
-        <h2 className="text-center text-5xl font-bold tracking-tighter sm:text-6xl">
-          מה יהיה בהכשרה?
-        </h2>
-        <div className="mx-auto max-w-xl">
-          <p className="mt-5 text-center text-xl text-white/70">
-            תהליך מלא ללימוד ובניית מותג איקומרס מצליח, כולל ליווי, שיעורים פרקטיים, והתחייבות להצלחה או החזר כספי.
+    <section className="bg-black py-[72px] text-white sm:py-24">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+            מה יהיה בהכשרה?
+          </h2>
+          <p className="mx-auto mt-5 max-w-xl text-xl text-white/70">
+            תהליך מלא ללימוד ובניית מותג איקומרס מצליח, כולל ליווי, שיעורים פרקטיים,
+            והתחייבות להצלחה או החזר כספי.
           </p>
         </div>
-        <div className="mt-16 flex flex-col gap-4 sm:flex-row">
-          {featuresList.map((feature) => {
-            return (
-              <FeatureCard key={feature.id} feature={feature} />
-            );
-          })}
+
+        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {featuresList.map((feature) => (
+            <FeatureCard key={feature.id} feature={feature} />
+          ))}
         </div>
       </div>
-    </div>
-  );
+    </section>
+  )
 }
